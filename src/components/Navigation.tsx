@@ -17,7 +17,7 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
-    setIsMobileMenuOpen(false); // Close mobile menu after clicking
+    setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
@@ -31,8 +31,15 @@ const Navigation = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Abhay Chaurasia
+            <div className="flex items-center space-x-3">
+              <img 
+                src="https://github.com/abhay2321.png" 
+                alt="Abhay Chaurasia" 
+                className="w-10 h-10 rounded-full border-2 border-blue-400/50 hover:border-blue-400 transition-colors duration-200"
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Abhay Chaurasia
+              </span>
             </div>
             
             {/* Desktop Navigation */}
