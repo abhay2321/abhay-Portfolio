@@ -38,11 +38,13 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+      <div className="relative z-10 text-left max-w-4xl mx-auto px-4">
         <div className="mb-8">
-          <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-4xl font-bold shadow-2xl">
-            AC
-          </div>
+          <img 
+            src="https://github.com/abhay2321.png" 
+            alt="Abhay Chaurasia" 
+            className="w-32 h-32 mb-8 rounded-full border-4 border-blue-400/50 hover:border-blue-400 transition-colors duration-200 shadow-2xl"
+          />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
@@ -55,11 +57,11 @@ const Hero = () => {
           </span>
         </div>
         
-        <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl leading-relaxed">
           Passionate about building responsive, high-performance web applications with modern technologies and clean architecture.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 items-start">
           <button
             onClick={scrollToProjects}
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
@@ -74,7 +76,7 @@ const Hero = () => {
           </button>
         </div>
         
-        <div className="flex justify-center space-x-6 mt-12">
+        <div className="flex space-x-6 mt-12">
           <a
             href="https://www.linkedin.com/in/abhay-chaurasia-292a82255"
             target="_blank"
