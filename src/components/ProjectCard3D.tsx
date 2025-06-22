@@ -1,6 +1,6 @@
 
 import { Canvas } from '@react-three/fiber';
-import { Box, Text, OrbitControls } from '@react-three/drei';
+import { Box, OrbitControls } from '@react-three/drei';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
 
