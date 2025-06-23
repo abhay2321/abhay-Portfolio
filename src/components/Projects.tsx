@@ -6,24 +6,24 @@ const Projects = () => {
       description: "A full-featured MERN stack shopping platform with user authentication, product management, and Razorpay payment integration.",
       tech: ["React", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      demo: "#",
-      github: "#"
+      demo: "https://mern-e-commerce-front-end-chi.vercel.app/",
+      github: "https://github.com/abhay2321/MERN_E_Commerce_API"
     },
     {
       title: "Real-Time Collaborative Text Editor",
       description: "A Quill.js-powered text editor with real-time collaboration capabilities using Firebase and TypeScript for seamless team productivity.",
       tech: ["TypeScript", "Firebase", "Quill.js", "TailwindCSS"],
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-      demo: "#",
-      github: "#"
+      demo: "https://abhay-chaurasia-wasserstoff-front-end-intern-tasks.vercel.app/",
+      github: "https://github.com/abhay2321/abhay-chaurasia-wasserstoff-FrontEndInternTasks"
     },
     {
       title: "College Website",
       description: "A responsive, multi-page institutional website built with React, featuring smooth scrolling and secure form submissions via Web3form.",
       tech: ["React", "HTML/CSS", "react-scroll", "Web3form"],
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
-      demo: "#",
-      github: "#"
+      demo: "https://iet-collage-website-by-abhay.netlify.app/",
+      github: "https://github.com/abhay2321/Collage-Website"
     }
   ];
 

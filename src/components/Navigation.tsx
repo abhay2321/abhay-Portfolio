@@ -44,7 +44,7 @@ const Navigation = () => {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {["Home", "About", "Projects", "Services", "Contact"].map((item) => (
+              {["Home", "About", "Projects", "Services", "Testimonials", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -78,26 +78,21 @@ const Navigation = () => {
         />
         
         {/* Slide Panel */}
-        <div className={`absolute right-0 top-0 h-full w-80 bg-gray-950/95 backdrop-blur-md border-l border-gray-800 transform transition-transform duration-300 ease-in-out ${
+        <div className={`absolute right-0 top-0 h-full w-870 bg-gray-950/95 backdrop-blur-md border-l border-gray-800 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}>
           <div className="flex flex-col h-full">
             {/* Header */}
             <div className="flex justify-between items-center p-6 border-b border-gray-800">
               <div className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Menu
+                
               </div>
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                <X size={20} />
-              </button>
+          
             </div>
 
             {/* Navigation Links */}
-            <div className="flex flex-col space-y-2 p-6">
-              {["Home", "About", "Projects", "Services", "Contact"].map((item) => (
+            <div className="flex flex-col space-y-2 p-5">
+              {["Home", "About", "Projects", "Services", "Testimonials", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -112,7 +107,7 @@ const Navigation = () => {
             {/* Footer */}
             <div className="mt-auto p-6 border-t border-gray-800">
               <p className="text-gray-400 text-sm">
-                © 2024 Abhay Chaurasia
+                © 2025 Abhay Chaurasia
               </p>
             </div>
           </div>

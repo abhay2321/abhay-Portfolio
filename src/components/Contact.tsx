@@ -1,32 +1,38 @@
-
 import { useState } from "react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Here you would typically send the form data to a backend service
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
-  };
+    const [result, setResult] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", 
+        "fb2bda5a-6577-47c4-b336-85345bbcc57b");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+        event.target.reset();
+      }
+    };
 
   return (
     <section id="contact" className="py-20 bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-9">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Get In Touch
           </h2>
@@ -111,7 +117,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={onSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                   Name
@@ -120,8 +126,6 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                   placeholder="Your Name"
@@ -136,8 +140,6 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                   placeholder="your.email@example.com"
@@ -151,8 +153,6 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
@@ -167,8 +167,14 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
+               <div className="text-left md:text-center lg:text-right mt-3 ">
+                <span>{result}</span>
+              </div>
           </div>
+           
         </div>
+           
+
       </div>
     </section>
   );
