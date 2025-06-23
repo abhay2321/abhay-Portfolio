@@ -1,16 +1,16 @@
+import React from 'react';
 import { useState } from "react";
 
 const Contact = () => {
 
-    const [result, setResult] = useState("");
+     const [result, setResult] = React.useState("");
 
-    const onSubmit = async (event) => {
-      event.preventDefault();
-      setResult("Sending....");
-      const formData = new FormData(event.target);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
   
-      formData.append("access_key", 
-        "fb2bda5a-6577-47c4-b336-85345bbcc57b");
+    formData.append("access_key", "16cdd1e6-5b4f-4516-a681-e3ddfbffe09e");
   
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
