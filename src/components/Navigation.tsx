@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,6 +45,9 @@ const Navigation = () => {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
+
+              <Link to="/resume" className="hover:text-blue-500">Resume</Link>
+
               {["Home", "About", "Projects", "Services", "Testimonials", "Contact"].map((item) => (
                 <button
                   key={item}
@@ -92,6 +96,9 @@ const Navigation = () => {
 
             {/* Navigation Links */}
             <div className="flex flex-col space-y-2 p-5">
+
+              <Link to="/resume" className="hover:text-blue-500">Resume</Link>
+              
               {["Home", "About", "Projects", "Services", "Testimonials", "Contact"].map((item) => (
                 <button
                   key={item}
