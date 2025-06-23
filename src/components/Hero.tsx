@@ -156,7 +156,7 @@ const Hero = () => {
       <div className="relative z-10 text-left max-w-4xl mx-auto px-4">
         <div className="mb-0 mt-16 flex justify-center">
           <img
-            src="assets/images/abhaypro.png"
+            src="/public/abhaypro.png"
             alt="Abhay Chaurasia"
             className="w-44 h-44 mb-8 bg-gray-800/50 backdrop-blur-sm border border-gray-400 rounded-3xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
           />
