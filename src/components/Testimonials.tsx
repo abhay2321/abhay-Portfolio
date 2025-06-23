@@ -13,31 +13,31 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     name: 'Ayushi Verma',
-    image: '/assets/images/ayushi.jpg',
+    image: '/public/ayushi.jpg',
     feedback:
       '“Collaborating with Abhay Chaurasia was an absolute game-changer for our business. Their ability to design and develop a modern, responsive website perfectly aligned with our brand identity...”',
   },
   {
     name: 'Ankit Chaubey',
-    image: '/assets/images/ankit.jpg',
+    image: '/public/ankit.jpg',
     feedback:
       '“I had the pleasure of working alongside Abhay Chaurasia on several frontend projects. Their proficiency in React, Tailwind CSS... A true asset to any team!”',
   },
   {
     name: 'Govind Chaubey',
-    image: '/assets/images/govind.jpg',
+    image: '/public/govind.jpg',
     feedback:
       '“As a frontend developer, Abhay Chaurasia showcased exceptional skills during their internship at KECHKRITI IIT Kanpur...”',
   },
   {
     name: 'Javed Malik',
-    image: '/assets/images/javed.jpg',
+    image: '/public/javed.jpg',
     feedback:
       '“What sets Abhay Chaurasia apart as a frontend developer is their keen eye for detail and commitment to delivering pixel-perfect designs...”',
   },
   {
     name: 'Nishant Pandey',
-    image: '/assets/images/nishant.jpg',
+    image: '/public/nishant.jpg',
     feedback:
       '“The WorldAtlus project thrived thanks to Abhay Chaurasia’s frontend expertise. They not only developed a responsive and engaging user interface...”',
   },
