@@ -156,7 +156,7 @@ const Hero = () => {
       <div className="relative z-10 text-left max-w-4xl mx-auto px-4">
         <div className="mb-0 mt-16 flex justify-center">
           <img
-            src="/public/abhaypro.png"
+            src="/abhaypro.png"
             alt="Abhay Chaurasia"
             className="w-44 h-44 mb-8 bg-gray-800/50 backdrop-blur-sm border border-gray-400 rounded-3xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
           />
@@ -186,8 +186,9 @@ const Hero = () => {
           </button>
 
           <a
-            href="AbhayaChurasia_FullStack_Developer_Resume.pdf"
+            href="/AbhayaChurasia_FullStack_Developer_Resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
               Download Resume
